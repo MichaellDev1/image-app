@@ -14,7 +14,7 @@ export default function Header() {
         return navigate(`/search/${query}`)
     }
 
-    return <header className='w-full flex mb-10 justify-between h-[60px]'>
+    return <header className='w-full flex mb-10 justify-between h-[90px] px-11 items-center fixed z-10'>
         <div></div>
         <form onSubmit={handleSearch}>
             <input type="text" onChange={handleChangeInput} placeholder='Space, Marvel...' />
