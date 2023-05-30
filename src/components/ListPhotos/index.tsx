@@ -1,12 +1,16 @@
+import React from "react"
 
-export default function ListPhotos({ photos }: any) {
+function ListPhotos({ photos }: any) {
+
     return <div className="w-full justify-center flex flex-wrap gap-6 items-center">
         {
             photos.map(photo => (
-                <div className="max-w-[400px] max-h-[500px] overflow-hidden relative">
+                <a href={`/photo/${photo.id}`} className="max-w-[400px] max-h-[500px] overflow-hidden relative" key={photo.id}>
                     <img src={photo.src.portrait} alt={photo.alt} />
-                </div>
+                </a>
             ))
         }
     </div>
 }
+
+export default React.memo(ListPhotos)
